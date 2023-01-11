@@ -13,11 +13,19 @@ public class Alien extends Actor
      * Act - do whatever the Zombie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */    
+    
+    public Alien()
+    {
+        GreenfootImage image = getImage();
+        image.scale(50,50);
+        setImage(image);
+    }
+    
     int speed = 1;
     public void act()
     {        
-        int x = getX();
-        int y = getY() + speed;
+        int x = getX() - speed;
+        int y = getY();
         setLocation(x, y);
         
         MyWorld world = (MyWorld) getWorld();

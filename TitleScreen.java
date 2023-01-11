@@ -22,23 +22,28 @@ public class TitleScreen extends World
         prepare();
     }
 
+    public void act()
+    {
+        if(Greenfoot.isKeyDown("space"));
+        {
+            MyWorld gameWorld = new MyWorld();
+            Greenfoot.setWorld(gameWorld);
+        }
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
-        Label label = new Label("Man V Zombies", 89);
+        Label label = new Label("Man V Aliens", 89);
         addObject(label,336,170);
         label.setLocation(405,87);
         Label label2 = new Label("Press <Space> to Start", 50);
         addObject(label2,353,296);
-        label2.setLocation(327,446);
-        label.setLocation(291,83);
-        label.setLocation(397,82);
-        label2.setLocation(486,449);
-        label2.setLocation(392,445);
-        label.setLocation(340,92);
-        label2.setLocation(312,444);
+        label.setLocation(367,75);
+        label2.setLocation(350,426);
+        label2.setLocation(336,443);
     }
 }

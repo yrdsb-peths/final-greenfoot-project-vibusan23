@@ -9,6 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
 
+    Label scoreLabel;
+    int level = 1;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -22,11 +25,11 @@ public class MyWorld extends World
 
     public void createAlien()
     {
-        //*Zombie zom = new Zombie();
-        //Zombie.setSpeed(level);
+        //Alien ufo = new Alien();
+        //Alien.setSpeed(level);
         //int x = 0;
         //int y = Greenfoot.getRandomNumber(400);
-        //addObject(Zombie, x, y);
+        //addObject(Alien, x, y);
 
     }
 
@@ -35,6 +38,7 @@ public class MyWorld extends World
         Label gameOverLabel = new Label ("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -43,5 +47,8 @@ public class MyWorld extends World
     {
         Man man = new Man();
         addObject(man,125,210);
+
+        Alien alien = new Alien();
+        addObject(alien,546,166);
     }
 }

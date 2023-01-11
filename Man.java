@@ -47,4 +47,10 @@ public class Man extends Actor
         setLocation(x, y);
         
     }
+    
+    public void shotFired()
+    {
+        Bullet bullet = new Bullet();
+        getWorld().addObject(bullet, getX(), getY());
+    }
 }

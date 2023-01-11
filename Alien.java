@@ -31,7 +31,6 @@ public class Alien extends Actor
         MyWorld world = (MyWorld) getWorld();
         if (getX() >= world.getWidth())
         {
-            world.gameOver();
             world.removeObject(this);
         }
     }

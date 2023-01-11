@@ -25,19 +25,14 @@ public class MyWorld extends World
 
     public void createAlien()
     {
-        //Alien ufo = new Alien();
+        Alien ufo = new Alien();
         //Alien.setSpeed(level);
-        //int x = 0;
-        //int y = Greenfoot.getRandomNumber(400);
-        //addObject(Alien, x, y);
+        int x = 0;
+        int y = Greenfoot.getRandomNumber(400);
+        addObject(ufo, x, y);
 
     }
 
-    public void gameOver()
-    {
-        Label gameOverLabel = new Label ("Game Over", 100);
-        addObject(gameOverLabel, 300, 200);
-    }
     
     /**
      * Prepare the world for the start of the program.

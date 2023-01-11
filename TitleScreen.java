@@ -45,5 +45,18 @@ public class TitleScreen extends World
         label.setLocation(367,75);
         label2.setLocation(350,426);
         label2.setLocation(336,443);
+        label2.setLocation(404,434);
+        label2.setLocation(370,437);
+        AlienForBackGround alienForBackGround = new AlienForBackGround();
+        addObject(alienForBackGround,565,257);
+        alienForBackGround.setLocation(571,265);
+        PlaneForBackGround planeForBackGround = new PlaneForBackGround();
+        addObject(planeForBackGround,164,288);
+        planeForBackGround.setLocation(208,276);
+        alienForBackGround.setLocation(599,268);
+        alienForBackGround.setLocation(553,267);
+        planeForBackGround.setLocation(184,260);
+        alienForBackGround.setLocation(566,233);
+        planeForBackGround.setLocation(113,267);
     }
 }

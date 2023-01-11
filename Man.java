@@ -33,6 +33,17 @@ public class Man extends Actor
         {
             y += 2;
         }
+        
+        if(Greenfoot.isKeyDown("right"))
+        {
+            x += 2;
+        }
+        
+        if(Greenfoot.isKeyDown("left"))
+        {
+            x -= 2;
+        }
+        
         setLocation(x, y);
         
     }

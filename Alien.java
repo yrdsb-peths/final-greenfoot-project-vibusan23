@@ -7,7 +7,7 @@ import greenfoot.World;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Zombie extends Actor
+public class Alien extends Actor
 {
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever

@@ -3,16 +3,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 /**
- * Write a description of class MyWorld here.
+ * This is the code for the Title Screen
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class TitleScreen extends World
 {
 
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class TitleScreen.
      * 
      */
     public TitleScreen()
@@ -22,6 +22,10 @@ public class TitleScreen extends World
         prepare();
     }
 
+    /**
+     * This code will be the actor for the Title Screen.
+     */
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("space"))
@@ -38,17 +42,13 @@ public class TitleScreen extends World
     private void prepare()
     {
         Label label = new Label("Man vs Aliens", 89);
-        addObject(label,300,170);
-        label.setLocation(350,87);
+        addObject(label,350,87);
         Label label2 = new Label("Press <Space> to Start", 50);
-        addObject(label2,465,295);
-        label2.setLocation(350,460);
+        addObject(label2,350,460);
         AlienForBackGround alienForBackGround = new AlienForBackGround();
-        addObject(alienForBackGround,565,257);
-        alienForBackGround.setLocation(571,265);
+        addObject(alienForBackGround,571,265);
         PlaneForBackGround planeForBackGround = new PlaneForBackGround();
-        addObject(planeForBackGround,164,288);
-        planeForBackGround.setLocation(170,285);
+        addObject(planeForBackGround,170,285);
     }
 
 }

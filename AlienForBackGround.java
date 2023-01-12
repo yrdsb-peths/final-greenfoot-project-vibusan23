@@ -1,17 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class AlienForBackGround here.
+ * This is the Alien only used in the background as an image 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class AlienForBackGround extends Actor
 {
-    /**
-     * Act - do whatever the AlienForBackGround wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public AlienForBackGround()
     {
         GreenfootImage image = getImage();

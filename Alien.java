@@ -2,18 +2,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.World;
 
 /**
- * Write a description of class Zombie here.
+ * This is the code for the Alien/UFO in the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class Alien extends Actor
 {
     /**
-     * Act - do whatever the Zombie wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */    
-    
+     * This code will be the Constructor for Alien 
+     */
     public Alien()
     {
         GreenfootImage image = getImage();
@@ -22,6 +20,10 @@ public class Alien extends Actor
     }
     
     int speed = 1;
+    
+    /**
+     * This code will be the Actor for ALien
+     */
     public void act()
     {        
         int x = getX() - speed;
@@ -39,6 +41,9 @@ public class Alien extends Actor
         
     }
     
+    /**
+     * This code sets the speed
+     */
     public void setSpeed(int spd)
     {
         speed = spd;

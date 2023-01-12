@@ -7,17 +7,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Man extends Actor
-{
-    /**
-     * Act - do whatever the Man wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+{    
+    private int shootDelay = 35;
+    private final int SHOOT_DELAY_MAX = 35;
+    
     public Man()
     {
         GreenfootImage image = getImage();
         image.scale(150,150);
         setImage(image);
     }
+    
+    /**
+     * Act - do whatever the Man wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     
     public void act()
     {
@@ -45,6 +49,17 @@ public class Man extends Actor
         }
         
         setLocation(x, y);
+        
+        shootDelay++;
+        if(Greenfoot.isKeyDown("space"))
+        {
+            if (shootDelay >= SHOOT_DELAY_MAX)
+            {
+                shotFired();
+                shootDelay = 0;
+            }
+            
+        }
         
     }
     

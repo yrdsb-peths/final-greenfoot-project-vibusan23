@@ -24,7 +24,7 @@ public class TitleScreen extends World
 
     public void act()
     {
-        if(Greenfoot.isKeyDown("space"));
+        if(Greenfoot.isKeyDown("space"))
         {
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
@@ -37,26 +37,18 @@ public class TitleScreen extends World
      */
     private void prepare()
     {
-        Label label = new Label("Man V Aliens", 89);
-        addObject(label,336,170);
-        label.setLocation(405,87);
+        Label label = new Label("Man vs Aliens", 89);
+        addObject(label,300,170);
+        label.setLocation(350,87);
         Label label2 = new Label("Press <Space> to Start", 50);
-        addObject(label2,353,296);
-        label.setLocation(367,75);
-        label2.setLocation(350,426);
-        label2.setLocation(336,443);
-        label2.setLocation(404,434);
-        label2.setLocation(370,437);
+        addObject(label2,465,295);
+        label2.setLocation(350,460);
         AlienForBackGround alienForBackGround = new AlienForBackGround();
         addObject(alienForBackGround,565,257);
         alienForBackGround.setLocation(571,265);
         PlaneForBackGround planeForBackGround = new PlaneForBackGround();
         addObject(planeForBackGround,164,288);
-        planeForBackGround.setLocation(208,276);
-        alienForBackGround.setLocation(599,268);
-        alienForBackGround.setLocation(553,267);
-        planeForBackGround.setLocation(184,260);
-        alienForBackGround.setLocation(566,233);
-        planeForBackGround.setLocation(113,267);
+        planeForBackGround.setLocation(170,285);
     }
+
 }

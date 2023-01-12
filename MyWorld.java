@@ -11,6 +11,18 @@ public class MyWorld extends World
 
     Label scoreLabel;
     int level = 1;
+    int alienTimer = 100;
+    int alienTimerMax = 100;
+    
+    public void act()
+    {
+        if (alienTimer >= alienTimerMax)
+        {
+            createAlien();
+            alienTimer = 0;
+        }
+        alienTimer++;
+    }
     
     /**
      * Constructor for objects of class MyWorld.
@@ -26,11 +38,9 @@ public class MyWorld extends World
     public void createAlien()
     {
         Alien ufo = new Alien();
-        //Alien.setSpeed(level);
-        int x = 0;
+        int x = 546;
         int y = Greenfoot.getRandomNumber(400);
         addObject(ufo, x, y);
-
     }
 
     
@@ -42,8 +52,5 @@ public class MyWorld extends World
     {
         Man man = new Man();
         addObject(man,125,210);
-
-        Alien alien = new Alien();
-        addObject(alien,546,166);
     }
 }

@@ -29,14 +29,19 @@ public class Alien extends Actor
         setLocation(x, y);
         
         MyWorld world = (MyWorld) getWorld();
-        if (getX() >= world.getWidth())
+        if (getX() <= 0)
         {
             world.removeObject(this);
+            GameOver gameWorld = new GameOver();
+            Greenfoot.setWorld(gameWorld);
         }
+        
+        
     }
     
     public void setSpeed(int spd)
     {
         speed = spd;
     }
+    
 }

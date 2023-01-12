@@ -15,5 +15,19 @@ public class Bullet extends Actor
     public void act()
     {
         move(4);
+        
+        if(this.isAtEdge())
+        {
+            getWorld().removeObject(this);
+        }
+        
+        else if(this.isTouching(Alien.class))
+        {
+            //Alien alien = (Alien) getOneIntersectingObject(Alien.class);
+            removeTouching(Alien.class);
+            getWorld().removeObject(this);
+        }
     }
+    
+    
 }

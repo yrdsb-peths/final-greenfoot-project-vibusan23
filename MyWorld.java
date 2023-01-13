@@ -8,23 +8,33 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    public int score = 0;
+    private int score = 0;
     Label scoreLabel;
     int level = 1;
     int alienTimer = 100;
     int alienTimerMax = 100;
+    int aliensMade = 0;
+    private int SHOOT_DELAY_MAX = 45;
+    private int shipSpeed = 3;
     
     /**
      * This code below is the code for the Actor for the World
      */
-
+    
     public void act()
     {
         if (alienTimer >= alienTimerMax)
         {
             createAlien();
             alienTimer = 0;
+            
+            aliensMade++;
+            if (aliensMade % 5 == 0)
+            {
+                alienTimerMax = alienTimerMax - 2;
+            }
         }
+            
         alienTimer++;
     }
     
@@ -47,6 +57,15 @@ public class MyWorld extends World
         int x = 546;
         int y = Greenfoot.getRandomNumber(400);
         addObject(ufo, x, y);
+    }
+    
+    //creates Mystery Box
+    public void createMysteryBox()
+    {
+        MysteryBox box = new MysteryBox();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = Greenfoot.getRandomNumber(400); 
+        addObject(box, x, y);
     }
     
     /**
@@ -73,5 +92,33 @@ public class MyWorld extends World
     {
         Man man = new Man();
         addObject(man,125,210);
+        
+        scoreLabel = new Label(0, 40);
+        addObject(scoreLabel,25,26);
+    }
+    
+    public int getScore()
+    {
+        return score;
+    }
+    
+    public void lowerShootDelayMax()
+    {
+        SHOOT_DELAY_MAX = SHOOT_DELAY_MAX / 2;
+    }
+    
+    public void increaseShipSpeed()
+    {
+        shipSpeed = shipSpeed + 1;
+    }
+    
+    public int getShootDelayMax()
+    {
+        return SHOOT_DELAY_MAX;
+    }
+    
+    public int getShipSpeed()
+    {
+        return shipSpeed;
     }
 }

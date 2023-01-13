@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bullet here.
+ * This is the Bullet Class. This is what kills the aliens
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class Bullet extends Actor
 {
@@ -14,16 +14,25 @@ public class Bullet extends Actor
      */
     public void act()
     {
-        move(4);
+        move(3);
         
+        //deletes the bullet when it reaches the end of the world
         if(this.isAtEdge())
         {
             getWorld().removeObject(this);
         }
         
+        //deletes the alien when the bullet touches it.
         else if(this.isTouching(Alien.class))
         {
-            //Alien alien = (Alien) getOneIntersectingObject(Alien.class);
+            ((MyWorld) getWorld()).increaseScore();
+            
+            int score = ((MyWorld) getWorld()).getScore();
+            if (score % 10 == 0 && score != 0)
+            {
+                ((MyWorld) getWorld()).createMysteryBox();
+            }
+
             removeTouching(Alien.class);
             getWorld().removeObject(this);
         }

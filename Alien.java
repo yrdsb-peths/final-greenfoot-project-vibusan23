@@ -19,7 +19,7 @@ public class Alien extends Actor
         setImage(image);
     }
     
-    int speed = 1;
+    int speed = 2;
     
     /**
      * This code will be the Actor for ALien
@@ -32,6 +32,13 @@ public class Alien extends Actor
         
         MyWorld world = (MyWorld) getWorld();
         if (getX() <= 0)
+        {
+            world.removeObject(this);
+            GameOver gameWorld = new GameOver();
+            Greenfoot.setWorld(gameWorld);
+        }
+        
+        else if (this.isTouching(Man.class))
         {
             world.removeObject(this);
             GameOver gameWorld = new GameOver();

@@ -1,16 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Man here.
+ * This class is used for the fighter jet that will be used as the ship that 
+ * the player will use to shoot the aliens
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class Man extends Actor
 {    
     private int shootDelay = 35;
-    private final int SHOOT_DELAY_MAX = 35;
+    private int SHOOT_DELAY_MAX;
+    private int shipSpeed;
     
+    /**
+     * This is the constructor for Man
+     */
     public Man()
     {
         GreenfootImage image = getImage();
@@ -27,30 +32,36 @@ public class Man extends Actor
     {
         int x = getX();
         int y = getY();
+        SHOOT_DELAY_MAX = ((MyWorld) getWorld()).getShootDelayMax();
+        shipSpeed = ((MyWorld) getWorld()).getShipSpeed();
         
         if(Greenfoot.isKeyDown("up"))
         {
-            y -= 2;
+            y -= shipSpeed;
         }
         
         if(Greenfoot.isKeyDown("down"))
         {
-            y += 2;
+            y += shipSpeed;
         }
         
         if(Greenfoot.isKeyDown("right"))
         {
-            x += 2;
+            x += shipSpeed;
         }
         
         if(Greenfoot.isKeyDown("left"))
         {
-            x -= 2;
+            x -= shipSpeed;
         }
-        
+    
+        //this sets the location
         setLocation(x, y);
         
+        //this causes delay in the shot
         shootDelay++;
+        
+        //this shoots the bullet
         if(Greenfoot.isKeyDown("space"))
         {
             if (shootDelay >= SHOOT_DELAY_MAX)
@@ -63,6 +74,10 @@ public class Man extends Actor
         
     }
     
+    
+    /**
+     * This is the method used for shooting the bullet
+     */
     public void shotFired()
     {
         Bullet bullet = new Bullet();

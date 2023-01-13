@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PlaneForBackGround here.
+ * This class is soley for the TitleScreen Class.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class PlaneForBackGround extends Actor
 {
@@ -19,8 +19,4 @@ public class PlaneForBackGround extends Actor
         setImage(image);
     }
     
-    public void act()
-    {
-        // Add your action code here.
-    }
 }

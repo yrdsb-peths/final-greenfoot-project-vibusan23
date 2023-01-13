@@ -8,15 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AlienForBackGround extends Actor
 {
+    /**
+     * The code below allows for the image to be made purely for the background
+     */
     public AlienForBackGround()
     {
         GreenfootImage image = getImage();
         image.scale(150,150);
         setImage(image);
-    }
-    
-    public void act()
-    {
-        // Add your action code here.
     }
 }

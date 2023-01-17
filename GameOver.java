@@ -10,6 +10,7 @@ public class GameOver extends World
 {
     public void act()
     {
+        //creates a goes to the titlescreen when space is pressed
         if(Greenfoot.isKeyDown("space"))
         {
             TitleScreen title = new TitleScreen();

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class InstructionPage here.
+ * This class will be the instruction page
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class InstructionPage extends World
 {
@@ -19,7 +19,10 @@ public class InstructionPage extends World
         super(600, 400, 1); 
         prepare();
     }
-
+    
+    /**
+     * This code will be the Actor for ALien
+     */
     public void act()
     {
         if(Greenfoot.isKeyDown("space"))

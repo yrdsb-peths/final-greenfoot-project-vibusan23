@@ -10,6 +10,7 @@ public class Bullet extends Actor
 {
     public Bullet()
     {
+        //scales the bullet
         GreenfootImage image = getImage();
         image.scale(40,15);
         setImage(image);
@@ -24,23 +25,24 @@ public class Bullet extends Actor
     {
         move(3);
         
-        //deletes the bullet when it reaches the end of the world
         if(this.isAtEdge())
         {
             getWorld().removeObject(this);
         }
         
-        //deletes the alien when the bullet touches it.
         else if(this.isTouching(Alien.class))
         {
+            //increases score when alien is killed
             ((MyWorld) getWorld()).increaseScore();
             
             int score = ((MyWorld) getWorld()).getScore();
             if (score % 20 == 0 && score != 0)
             {
+                //creates a mysterybox
                 ((MyWorld) getWorld()).createMysteryBox();
             }
-        
+            
+            //deletes the alien when the bullet touches it.
             removeTouching(Alien.class);
             getWorld().addObject(new Explosion(), getX(), getY());
             getWorld().removeObject(this);

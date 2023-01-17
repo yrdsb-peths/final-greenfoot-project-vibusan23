@@ -12,14 +12,17 @@ public class Explosion extends Actor
     private SimpleTimer animationTimer = new SimpleTimer();
     private int imageIndex = 0;
     
+    //constructor for the Explosion
     public Explosion()
     {
+        //animates the explosion
         for (int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("images/tile00" + i + ".png");
             idle[i].scale(55, 55);
         }
         
+        //sets image at where the array is at
         setImage(idle[0]);
         
     }
@@ -33,6 +36,7 @@ public class Explosion extends Actor
         animateExplosion();
     }
 
+    //method for explosion animation
     public void animateExplosion()
     {
         if (animationTimer.millisElapsed() < 50)
@@ -46,6 +50,7 @@ public class Explosion extends Actor
         }
         animationTimer.mark();
         
+        //sets the image at the index its at.
         setImage(idle[imageIndex]);
         imageIndex++;
     }

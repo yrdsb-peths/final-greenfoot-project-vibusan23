@@ -23,6 +23,7 @@ public class MyWorld extends World
     
     public void act()
     {
+        //it creates more aliens over time
         if (alienTimer >= alienTimerMax)
         {
             createAlien();
@@ -38,19 +39,16 @@ public class MyWorld extends World
         alienTimer++;
     }
     
-    /**
-     * Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-     */
+    
+    //Create a new world with 600x400 cells with a cell size of 1x1 pixels. 
     public MyWorld()
     {    
         super(600, 400, 1); 
         prepare();
     }
-
-    /**
-     * This code will create a UFO
-     */
     
+    
+    //This code will create a UFO.
     public void createAlien()
     {
         Alien ufo = new Alien();
@@ -68,10 +66,8 @@ public class MyWorld extends World
         addObject(box, x, y);
     }
     
-    /**
-     * This code will be used to increase the score which is counted when a Alien is killed
-     */
     
+    //This code will be used to increase the score which is counted when a Alien is killed.
     public void increaseScore()
     {
         score++;
@@ -99,26 +95,32 @@ public class MyWorld extends World
     
     public int getScore()
     {
+        //gets the score
         return score;
     }
     
     public void lowerShootDelayMax()
     {
+        //lowers the shoot delay
         SHOOT_DELAY_MAX = SHOOT_DELAY_MAX - 1;
     }
     
     public void increaseShipSpeed()
     {
+        //increase the ship speed
         shipSpeed = shipSpeed + 1;
     }
     
     public int getShootDelayMax()
     {
+        //getter method for shoot delay
         return SHOOT_DELAY_MAX;
     }
     
+    
     public int getShipSpeed()
     {
+        //getter method for ship speed
         return shipSpeed;
     }
 }

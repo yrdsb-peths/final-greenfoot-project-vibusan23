@@ -15,7 +15,7 @@ public class PlaneForBackGround extends Actor
     public PlaneForBackGround()
     {
         GreenfootImage image = getImage();
-        image.scale(350,350);
+        image.scale(185,185);
         setImage(image);
     }
     

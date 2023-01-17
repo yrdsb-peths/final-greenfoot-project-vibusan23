@@ -20,7 +20,7 @@ public class Man extends Actor
     public Man()
     {
         GreenfootImage image = getImage();
-        image.scale(150,150);
+        image.scale(95,75);
         setImage(image);
     }
     

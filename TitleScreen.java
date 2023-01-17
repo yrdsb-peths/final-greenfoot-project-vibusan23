@@ -48,7 +48,7 @@ public class TitleScreen extends World
         AlienForBackGround alienForBackGround = new AlienForBackGround();
         addObject(alienForBackGround,571,265);
         PlaneForBackGround planeForBackGround = new PlaneForBackGround();
-        addObject(planeForBackGround,170,285);
+        addObject(planeForBackGround,170,265);
     }
 
 }

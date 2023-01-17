@@ -40,8 +40,9 @@ public class Bullet extends Actor
             {
                 ((MyWorld) getWorld()).createMysteryBox();
             }
-
+        
             removeTouching(Alien.class);
+            getWorld().addObject(new Explosion(), getX(), getY());
             getWorld().removeObject(this);
         }
     }

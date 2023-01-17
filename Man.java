@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Man extends Actor
 {    
+    GreenfootSound LazorSound = new GreenfootSound("Lazersound.mp3");
     private int shootDelay = 35;
     private int SHOOT_DELAY_MAX;
     private int shipSpeed;
@@ -55,6 +56,7 @@ public class Man extends Actor
             x -= shipSpeed;
         }
     
+        
         //this sets the location
         setLocation(x, y);
         
@@ -82,5 +84,6 @@ public class Man extends Actor
     {
         Bullet bullet = new Bullet();
         getWorld().addObject(bullet, getX(), getY());
+        LazorSound.play();
     }
 }

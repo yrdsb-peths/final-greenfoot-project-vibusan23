@@ -35,22 +35,21 @@ public class InstructionPage extends World
      */
     private void prepare()
     {
-        Label label = new Label("The objective of this game is to kill the Zombies", 30);
+        Label label = new Label("The objective of this game is to kill the Zombies.", 30);
         addObject(label,267,166);
-        Label label2 = new Label("In this game, you play as the man in the plane", 32);
+        Label label2 = new Label("In this game, you play as the man in the plane.", 32);
         addObject(label2,291,143);
-        Label label3 = new Label("Your controls are:", 32);
-        addObject(label3,20,283);
-        Label label4 = new Label("The Arrow Keys - Movement Controls", 25);
-        addObject(label4,380,287);
-        label4.setLocation(420,278);
         label.setLocation(300,157);
-        label2.setLocation(389,112);
-        label3.setLocation(135,279);
-        Label label5 = new Label("If the Zombies hit the end of the world or touch your plane, the GAME ENDS!", 20);
+        label2.setLocation(300,112);
+        Label label5 = new Label("If the Zombies hit the end of the world or touch your plane, the GAME ENDS!.", 20);
         addObject(label5,265,221);
         label5.setLocation(300,207);
         Label label6 = new Label("Instructions", 35);
         addObject(label6,300,53);
+        Label label4 = new Label("Your controls are the Arrow Keys for Movement and Spacebar to fire.", 20);
+        addObject(label4,290,258);
+        label4.setLocation(300,255);
+        Label label7 = new Label("Mystery Boxes will pop up occassionally to grant special suprises including speed up and faster bullets!", 16);
+        addObject(label7,300,314);
     }
 }

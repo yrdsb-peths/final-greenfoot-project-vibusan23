@@ -13,7 +13,7 @@ public class MysteryBox extends Actor
     public MysteryBox()
     {
         GreenfootImage image = getImage();
-        image.scale(75,75);
+        image.scale(65,65);
         setImage(image);
     }
     

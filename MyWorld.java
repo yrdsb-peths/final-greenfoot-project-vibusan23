@@ -14,7 +14,7 @@ public class MyWorld extends World
     int alienTimer = 100;
     int alienTimerMax = 100;
     int aliensMade = 0;
-    private int SHOOT_DELAY_MAX = 45;
+    private int SHOOT_DELAY_MAX = 65;
     private int shipSpeed = 3;
     
     /**
@@ -104,7 +104,7 @@ public class MyWorld extends World
     
     public void lowerShootDelayMax()
     {
-        SHOOT_DELAY_MAX = SHOOT_DELAY_MAX / 2;
+        SHOOT_DELAY_MAX = SHOOT_DELAY_MAX - 1;
     }
     
     public void increaseShipSpeed()

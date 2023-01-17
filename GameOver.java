@@ -8,7 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOver extends World
 {
-
+    public void act()
+    {
+        if(Greenfoot.isKeyDown("space"))
+        {
+            TitleScreen title = new TitleScreen();
+            Greenfoot.setWorld(title);
+        }
+    }
+    
     /**
      * Constructor for objects of class GameOver.
      * 

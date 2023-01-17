@@ -8,10 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
+    public Bullet()
+    {
+        GreenfootImage image = getImage();
+        image.scale(40,15);
+        setImage(image);
+    }
+    
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
     public void act()
     {
         move(3);
@@ -28,7 +36,7 @@ public class Bullet extends Actor
             ((MyWorld) getWorld()).increaseScore();
             
             int score = ((MyWorld) getWorld()).getScore();
-            if (score % 10 == 0 && score != 0)
+            if (score % 20 == 0 && score != 0)
             {
                 ((MyWorld) getWorld()).createMysteryBox();
             }

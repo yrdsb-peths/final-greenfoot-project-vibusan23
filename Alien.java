@@ -38,12 +38,12 @@ public class Alien extends Actor
             Greenfoot.setWorld(gameWorld);
         }
         
-        //else if (this.isTouching(Man.class))
-        //{
-            //world.removeObject(this);
-            //GameOver gameWorld = new GameOver();
-            //Greenfoot.setWorld(gameWorld);
-        //}
+        else if (this.isTouching(Man.class))
+        {
+            world.removeObject(this);
+            GameOver gameWorld = new GameOver();
+            Greenfoot.setWorld(gameWorld);
+        }
         
         
     }

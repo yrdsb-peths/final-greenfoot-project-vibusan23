@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.Alien.image=ufo-ga3f3d14d7_640.png
 class.AlienForBackGround.image=ufo-ga3f3d14d7_640.png
-class.Bullet.image=pixil-frame-0.png
+class.Bullet.image=lazer\ (1).png
 class.GameOver.image=GameOverScreen.jpg
 class.InstructionPage.image=9b54aeb05d88665c605dd650a643b794.jpg
 class.Man.image=Man\ in\ Plane.png
@@ -63,10 +63,10 @@ dependency8.type=UsesDependency
 dependency9.from=TitleScreen
 dependency9.to=AlienForBackGround
 dependency9.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=151
-editor.fx.0.y=0
+editor.fx.0.height=744
+editor.fx.0.width=1382
+editor.fx.0.x=-8
+editor.fx.0.y=-8
 height=744
 package.numDependencies=18
 package.numTargets=12

@@ -19,7 +19,7 @@ public class Explosion extends Actor
         for (int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("images/tile00" + i + ".png");
-            idle[i].scale(55, 55);
+            idle[i].scale(63, 63);
         }
         
         //sets image at where the array is at

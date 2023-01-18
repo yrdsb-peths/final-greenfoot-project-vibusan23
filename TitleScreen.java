@@ -28,6 +28,7 @@ public class TitleScreen extends World
     
     public void act()
     {
+        //brings the player to the Instruction page when pressing space.
         if(Greenfoot.isKeyDown("space"))
         {
             InstructionPage instructions = new InstructionPage();

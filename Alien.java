@@ -9,6 +9,8 @@ import greenfoot.World;
  */
 public class Alien extends Actor
 {
+    int speed = 2;
+    
     /**
      * This code will be the Constructor for Alien 
      */
@@ -20,14 +22,11 @@ public class Alien extends Actor
         setImage(image);
     }
     
-    int speed = 2;
-    
     /**
      * This code will be the Actor for ALien
      */
     public void act()
     {   
-        //gets the coordinates
         int x = getX() - speed;
         int y = getY();
         setLocation(x, y);
@@ -52,9 +51,7 @@ public class Alien extends Actor
         
     }
     
-    /**
-     * This code sets the speed
-     */
+    //sets the speed
     public void setSpeed(int spd)
     {
         speed = spd;

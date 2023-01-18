@@ -27,6 +27,7 @@ public class Bullet extends Actor
         
         if(this.isAtEdge())
         {
+            //removes the object when it gets to the end of the world.
             getWorld().removeObject(this);
         }
         

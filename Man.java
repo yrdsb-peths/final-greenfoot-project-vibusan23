@@ -36,6 +36,7 @@ public class Man extends Actor
         SHOOT_DELAY_MAX = ((MyWorld) getWorld()).getShootDelayMax();
         shipSpeed = ((MyWorld) getWorld()).getShipSpeed();
         
+        //movement controls
         if(Greenfoot.isKeyDown("up"))
         {
             y -= shipSpeed;
@@ -77,9 +78,8 @@ public class Man extends Actor
     }
     
     
-    /**
-     * This is the method used for shooting the bullet
-     */
+    
+    //This is the method used for shooting the bullet 
     public void shotFired()
     {
         Bullet bullet = new Bullet();

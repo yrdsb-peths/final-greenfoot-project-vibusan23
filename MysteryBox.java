@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MysteryBox here.
+ * This class will be the Mystery box item in the game.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class MysteryBox extends Actor
 {

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Explosion here.
+ * This is the Explosion class that will be used as an animation.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vibusan Anandarajah) 
+ * @version (January 18, 2023)
  */
 public class Explosion extends Actor
 {
